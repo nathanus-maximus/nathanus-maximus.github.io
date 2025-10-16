@@ -38,11 +38,25 @@ I wanted to learn about the NIST incident response process (“Preparation”, �
 
 a)	Reading/learning about the NIST Incident Response process.
 
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/004.jpg)
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/005.jpg)
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/006.jpg)
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/007.jpg)
+
 b)	Reading the report from the fictionalised SOC team about the incident.
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/008.jpg)
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/009.jpg)
 
 c)	The “Preparation” step has been completed by the fictionalised organisation, i.e. having a SOC, SEIMs, IDS, EDR, Incident Response teams, etc.
 
 d)	“Detection” has been completed by the user and the SOC team (i.e. the report that was sent to the Incident Response Team)
+
+![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/010.jpg)
 
 e)	“Analysis”:
 
@@ -50,31 +64,46 @@ e)	“Analysis”:
 * Look at Windows Task Manager.
 * There are no running apps but computer is still very slow.
 * Look at background processes.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/013.jpg)
 * There is a background process with very high CPU usage: “32th4ckm3.exe”
 * Find out that .exe is running from a temporary folder.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/015.jpg)
 * Find process ID for 32th4ckm3.exe and use netstat to see if it is utilising network.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/016.jpg)
 * Find that 32th4ckm3.exe is sending and receiving on a random port number to a mysterious IP address.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/018.jpg)
 * Make notes of all of this information to use later for reporting and as an IOC.
 * Make the determination that this .exe is likely to be a “cryptominer.”
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/019.jpg)
 * Next, determine the infection vector.
 * Check the user’s system for browser. The user said they were browsing the web when their computer initially slowed down.
 * Open the download folder of Microsoft Edge (the only browser installed).
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/022.jpg)
 * See a file named “invoice n. 65748224.docm” which was downloaded from a suspicious link: “ht<span>tp://</span>172.233.61.246”. This is also a Word document that includes macros, so is more suspicious as it may contain malicious code.
 * When opening the word document, it has no useful content and seems suspicious. Furthermore, although the document has macros, Word doesn’t notify us.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/025.jpg)
 * Open “View > Macros” to inspect them, it seems there is indeed a macro, set to auto-open.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/026.jpg)
 * When inspecting the code of the macro, the 32th4ckm3.exe program is mentioned twice.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/027.jpg)
 * The code also shows that it gets cmd prompt to use certutil to download the cryptominer .exe file in a hidden window.
 * Then the code makes a Windows registry entry to add persistence.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/031.jpg)
 * Again, there is a need to note all of these details for reporting and IOC reasons.
 
 f)	“Containment, Eradication & Recovery”
 
 * Before the analysis stage, the SOC team detached the computer from the network.
 * Go into Task Manager and end the “32th4ckm3.exe” process.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/038.jpg)
 * Delete the “32th4ckm3.exe” cryptominer from the temporary folder.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/039.jpg)
 * Delete the Word document that downloaded the cryptominer.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/040.jpg)
 * Clear the download history to prevent user from accidentally clicking the same link.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/041.jpg)
 * To get rid of the persistence, delete the registry key associated with the cryptominer.
+  ![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/044.jpg)
 * (Use IOCs to search the rest of the network later).
 
 g)	“Post-Incident Activity”
@@ -98,5 +127,6 @@ I feel that it was an excellent exercise and I feel that I learn a great deal by
 <i>Looking back, what would you do differently if you repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
+
 
 
