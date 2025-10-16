@@ -1,4 +1,4 @@
 
 Projects:
 
-[Incident Response Process](./incident-response.html).
+[Incident Response Process](./incident-response.md).
