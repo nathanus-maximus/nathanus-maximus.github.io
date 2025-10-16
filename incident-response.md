@@ -57,7 +57,7 @@ e)	“Analysis”:
 •	Next, determine the infection vector.
 •	Check the user’s system for browser. The user said they were browsing the web when their computer initially slowed down.
 •	Open the download folder of Microsoft Edge (the only browser installed).
-•	See a file named “invoice n. 65748224.docm” which was downloaded from a suspicious link: “http://172.233.61.246”. This is also a Word document that includes macros, so is more suspicious as it may contain malicious code.
+•	See a file named “invoice n. 65748224.docm” which was downloaded from a suspicious link: “<span>http://172.233.61.246</span>”. This is also a Word document that includes macros, so is more suspicious as it may contain malicious code.
 •	When opening the word document, it has no useful content and seems suspicious. Furthermore, although the document has macros, Word doesn’t notify us.
 •	Open “View > Macros” to inspect them, it seems there is indeed a macro, set to auto-open.
 •	When inspecting the code of the macro, the 32th4ckm3.exe program is mentioned twice.
@@ -96,4 +96,5 @@ I feel that it was an excellent exercise and I feel that I learn a great deal by
 <i>Looking back, what would you do differently if you repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
+
 
