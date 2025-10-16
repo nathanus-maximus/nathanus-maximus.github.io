@@ -3,7 +3,7 @@ Incident Response Process
 
 <h1>TryHackMe Room – “Incident Response Process” (NIST Incident Response process)</h1>
 
-<u>Summary:</u>
+<h2>Summary:</h2>
 
 I chose to complete a TryHackMe “room” covering the NIST Incident Response process. According to TryHackMe, this room aims to “Practice the NIST Incident Response lifecycle steps on a compromised Windows workstation.”
 This activity aligns with both the NIST topic and the Incident Response topic of my Cybersecurity Fundamentals unit at university.
@@ -15,24 +15,24 @@ The general idea of this room was to respond to an “incident” – a user is 
 The outcome was that I successfully completed the challenges and finished the room (which is to say that I successfully followed the “NIST Incident Response” process).
 
 
-<u>Context of the chosen platform, its relevance to cybersecurity learning, and why I selected it:</u>
+<h2>Context of the chosen platform, its relevance to cybersecurity learning, and why I selected it:</h2>
 
 TryHackMe is a cybersecurity learning platform that has both free and premium tiers. It includes (at least) 800 “rooms” (the number is continually growing), which fall into the 2 categories of either “walkthroughs” or “challenges”. Walkthroughs are often a mix of informational and guided challenges. Challenges are essentially “capture the flags”, with little to no guidance about how you should do so.
 
 TryHackMe is a very popular cybersecurity learning platform, with over 6 million users, and it is growing very rapidly. It has many beginner-friendly features, including beginner “learning paths” that offer a guided way to approach practical learning in cybersecurity. It also has a “gamified” feel, which may excite beginners, and contribute to continued engagement with the platform.
 
 
-<u>Problem/Challenge – Description of the exercise/task attempted, its cybersecurity context, and its relevance:</u>
+<h2>Problem/Challenge – Description of the exercise/task attempted, its cybersecurity context, and its relevance:</h2>
 
 The exercise was to act as a member of the “Incident Response Team” and manage an incident on a compromised Windows workstation. The objectives of the room were to “understand the different phases of the incident response process”, and to “apply the process to a realistic scenario as an incident responder”.
 
 
-<u>Project Goal/Objectives – What I aimed to achieve from the activity:</u>
+<h2>Project Goal/Objectives – What I aimed to achieve from the activity:</h2>
 
 I wanted to learn about the NIST incident response process (“Preparation”, “Detection & Analysis”, “Containment, Eradication & Recovery”, and “Post-Incident Activity”), and gain experience following a realistic scenario with this process.
 
 
-<u>Methodology – Step-by-step explanation of how I carried out the activity, tools used, and reasoning for each step.</u>
+<h2>Methodology – Step-by-step explanation of how I carried out the activity, tools used, and reasoning for each step.</h2>
 
 a)	Reading/learning about the NIST Incident Response process.
 
@@ -83,7 +83,7 @@ g)	“Post-Incident Activity”
 * Back to “Preparation”!
 
 
-<u>Reflection:</u>
+<h2>Reflection:</h2>
 
 <i>What did I learn about cybersecurity concepts and tools from this exercise?</i>
 
@@ -96,7 +96,4 @@ I feel that it was an excellent exercise and I feel that I learn a great deal by
 <i>Looking back, what would you do differently if you repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
-
-
-
 
