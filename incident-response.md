@@ -124,7 +124,8 @@ I feel as though I have I learnt a great deal about the NIST Incident Response P
 
 I feel that it was an excellent exercise and I feel that I learn a great deal by completing it. It gave me a much deeper understanding of both Incident Response, and the NIST CSF. I feel that these skills are going to be useful no matter which role I end up in when working in cybersecurity. NIST is a very widely-used CSF, so any deeper knowledge of this framework would likely be welcome in any organisation that has cybersecurity staff, or even management staff tasked with compliance responsibilities.
 
-<i>Looking back, what would I do differently if you repeated the task?</i>
+<i>Looking back, what would I do differently if I repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
+
 
