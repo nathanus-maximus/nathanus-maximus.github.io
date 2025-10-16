@@ -8,7 +8,7 @@ Incident Response Process
 I chose to complete a TryHackMe “room” covering the NIST Incident Response process. According to TryHackMe, this room aims to “Practice the NIST Incident Response lifecycle steps on a compromised Windows workstation.”
 This activity aligns with both the NIST topic and the Incident Response topic of my Cybersecurity Fundamentals unit at university.
 
-![image](https://github.com/nathanus-maximus/nathanus-maximus.github.io/blob/assets/001.jpg)
+![image](assets/001.jpg)
 
 TryHackMe is a cybersecurity training platform with many challenge (essentially “capture the flags”) and walkthrough “rooms” based on specific topics relating to cybersecurity. The walkthrough rooms guide the user through specific challenges related to successfully completing an overall task – in this case the task was to follow the “NIST Incident Response” process.
 
@@ -127,6 +127,7 @@ I feel that it was an excellent exercise and I feel that I learn a great deal by
 <i>Looking back, what would you do differently if you repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
+
 
 
 
