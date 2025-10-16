@@ -44,43 +44,43 @@ d)	“Detection” has been completed by the user and the SOC team (i.e. the rep
 
 e)	“Analysis”:
 
-•	Report says that computer is extremely slow.
-•	Look at Windows Task Manager.
-•	There are no running apps but computer is still very slow.
-•	Look at background processes.
-•	There is a background process with very high CPU usage: “32th4ckm3.exe”
-•	Find out that .exe is running from a temporary folder.
-•	Find process ID for 32th4ckm3.exe and use netstat to see if it is utilising network.
-•	Find that 32th4ckm3.exe is sending and receiving on a random port number to a mysterious IP address.
-•	Make notes of all of this information to use later for reporting and as an IOC.
-•	Make the determination that this .exe is likely to be a “cryptominer.”
-•	Next, determine the infection vector.
-•	Check the user’s system for browser. The user said they were browsing the web when their computer initially slowed down.
-•	Open the download folder of Microsoft Edge (the only browser installed).
-•	See a file named “invoice n. 65748224.docm” which was downloaded from a suspicious link: “ht<span>tp://</span>172.233.61.246”. This is also a Word document that includes macros, so is more suspicious as it may contain malicious code.
-•	When opening the word document, it has no useful content and seems suspicious. Furthermore, although the document has macros, Word doesn’t notify us.
-•	Open “View > Macros” to inspect them, it seems there is indeed a macro, set to auto-open.
-•	When inspecting the code of the macro, the 32th4ckm3.exe program is mentioned twice.
-•	The code also shows that it gets cmd prompt to use certutil to download the cryptominer .exe file in a hidden window.
-•	Then the code makes a Windows registry entry to add persistence.
-•	Again, there is a need to note all of these details for reporting and IOC reasons.
+* Report says that computer is extremely slow.
+* Look at Windows Task Manager.
+* There are no running apps but computer is still very slow.
+* Look at background processes.
+* There is a background process with very high CPU usage: “32th4ckm3.exe”
+* Find out that .exe is running from a temporary folder.
+* Find process ID for 32th4ckm3.exe and use netstat to see if it is utilising network.
+* Find that 32th4ckm3.exe is sending and receiving on a random port number to a mysterious IP address.
+* Make notes of all of this information to use later for reporting and as an IOC.
+* Make the determination that this .exe is likely to be a “cryptominer.”
+* Next, determine the infection vector.
+* Check the user’s system for browser. The user said they were browsing the web when their computer initially slowed down.
+* Open the download folder of Microsoft Edge (the only browser installed).
+* See a file named “invoice n. 65748224.docm” which was downloaded from a suspicious link: “ht<span>tp://</span>172.233.61.246”. This is also a Word document that includes macros, so is more suspicious as it may contain malicious code.
+* When opening the word document, it has no useful content and seems suspicious. Furthermore, although the document has macros, Word doesn’t notify us.
+* Open “View > Macros” to inspect them, it seems there is indeed a macro, set to auto-open.
+* When inspecting the code of the macro, the 32th4ckm3.exe program is mentioned twice.
+* The code also shows that it gets cmd prompt to use certutil to download the cryptominer .exe file in a hidden window.
+* Then the code makes a Windows registry entry to add persistence.
+* Again, there is a need to note all of these details for reporting and IOC reasons.
 
 f)	“Containment, Eradication & Recovery”
 
-•	Before the analysis stage, the SOC team detached the computer from the network.
-•	Go into Task Manager and end the “32th4ckm3.exe” process.
-•	Delete the “32th4ckm3.exe” cryptominer from the temporary folder.
-•	Delete the Word document that downloaded the cryptominer.
-•	Clear the download history to prevent user from accidentally clicking the same link
-•	To get rid of the persistence, delete the registry key associated with the cryptominer.
-•	(Use IOCs to search the rest of the network later).
+* Before the analysis stage, the SOC team detached the computer from the network.
+* Go into Task Manager and end the “32th4ckm3.exe” process.
+* Delete the “32th4ckm3.exe” cryptominer from the temporary folder.
+* Delete the Word document that downloaded the cryptominer.
+* Clear the download history to prevent user from accidentally clicking the same link.
+* To get rid of the persistence, delete the registry key associated with the cryptominer.
+* (Use IOCs to search the rest of the network later).
 
 g)	“Post-Incident Activity”
 
-•	Review incident.
-•	Document lessons learned.
-•	Integrate new insights into a newly improved Incident Response Plan
-•	Back to “Preparation”!
+* Review incident.
+* Document lessons learned.
+* Integrate new insights into a newly improved Incident Response Plan
+* Back to “Preparation”!
 
 
 <u>Reflection:</u>
@@ -96,6 +96,7 @@ I feel that it was an excellent exercise and I feel that I learn a great deal by
 <i>Looking back, what would you do differently if you repeated the task?</i>
 
 This primarily was a guided activity, so there wasn’t a great deal of room for errors – however I probably would have tried to document deleting the .exe from the temporary folder correctly, as by the time I had deleted it, I realised that I should have screenshotted it. I got around it by making a note on a screenshot of the folder.
+
 
 
 
